@@ -17,6 +17,7 @@ public class staticCol {
 		LinkedHashMap<String, String> prodKey = new LinkedHashMap<String, String>();
 		LinkedHashMap<String, String> prodPP = new LinkedHashMap<String, String>();
 
+		//Code to read property files before start of program
 		System.out.println("Static block");
 
 		BufferedReader brKeyword = null;
