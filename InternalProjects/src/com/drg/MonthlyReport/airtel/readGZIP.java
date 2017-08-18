@@ -12,6 +12,7 @@ import java.util.zip.GZIPInputStream;
 
 public class readGZIP {
 	public static void main(String[] argv) throws IOException {
+		//Initiate the application
 		staticCol.initializeStaticVaraibles();
 		consReport cn = null;
 		BufferedReader is = null;
