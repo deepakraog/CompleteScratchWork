@@ -1,0 +1,76 @@
+2017-08-17 10:04:05,385 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-08-18 10:08:17,674 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-08-18 12:26:29,583 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-08-18 13:01:51,814 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-08-18 15:43:26,281 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-08-19 00:31:11,090 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.jar
+2017-08-19 00:31:11,420 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.jar
+2017-08-19 00:31:11,729 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.pom
+2017-08-19 00:31:12,029 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-webapp/1.0/maven-archetype-webapp-1.0.pom
+2017-08-19 00:33:59,675 [Worker-60] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\pom.xml
+2017-08-19 00:34:09,042 [Worker-60] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.drg.learnIt.NavenJ2EENew:EclipseWebapp:1.0-SNAPSHOT @ F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\pom.xml.
+2017-08-19 00:34:12,562 [Worker-60] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EclipseWebapp/src/main/java
+2017-08-19 00:34:12,562 [Worker-60] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EclipseWebapp/src/main/resources
+2017-08-19 00:34:12,562 [Worker-60] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EclipseWebapp/src/test/java
+2017-08-19 00:34:17,857 [Worker-60] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 18 sec
+2017-08-19 00:34:22,363 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:34:22,439 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:34:22,462 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:34:22,463 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:37:57,147 [Worker-59] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.drg.learnIt.NavenJ2EENew:EclipseWebapp:1.0-SNAPSHOT @ F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\pom.xml.
+2017-08-19 00:37:58,168 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:37:58,173 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:37:58,178 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:37:58,178 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:37:58,203 [Worker-59] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of EclipseWebapp
+2017-08-19 00:37:58,203 [Worker-59] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for EclipseWebapp
+2017-08-19 00:37:58,208 [Worker-59] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:37:58,468 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:37:58,473 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:37:58,473 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:37:58,478 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:38:26,058 [Worker-62] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.drg.learnIt.NavenJ2EENew:EclipseWebapp:1.0-SNAPSHOT @ F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\pom.xml.
+2017-08-19 00:38:26,924 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:38:26,929 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:38:26,929 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:38:26,929 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:38:26,929 [Worker-62] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of EclipseWebapp
+2017-08-19 00:38:26,929 [Worker-62] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for EclipseWebapp
+2017-08-19 00:38:26,934 [Worker-62] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:04,088 [Worker-60] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.drg.learnIt.NavenJ2EENew:EclipseWebapp:1.0-SNAPSHOT @ F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\pom.xml.
+2017-08-19 00:39:05,077 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:05,092 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:39:05,092 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:05,097 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:39:05,097 [Worker-60] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of EclipseWebapp
+2017-08-19 00:39:05,097 [Worker-60] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for EclipseWebapp
+2017-08-19 00:39:05,102 [Worker-60] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:09,048 [Worker-65] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.drg.learnIt.NavenJ2EENew:EclipseWebapp:1.0-SNAPSHOT @ F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\pom.xml.
+2017-08-19 00:39:09,782 [Worker-65] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:09,787 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:39:09,787 [Worker-65] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:09,787 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:39:09,787 [Worker-65] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of EclipseWebapp
+2017-08-19 00:39:09,787 [Worker-65] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for EclipseWebapp
+2017-08-19 00:39:09,792 [Worker-65] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:14,939 [Worker-65] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.drg.learnIt.NavenJ2EENew:EclipseWebapp:1.0-SNAPSHOT @ F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\pom.xml.
+2017-08-19 00:39:15,674 [Worker-65] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:15,684 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:39:15,684 [Worker-65] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:39:15,689 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:39:15,689 [Worker-65] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of EclipseWebapp
+2017-08-19 00:39:15,689 [Worker-65] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for EclipseWebapp
+2017-08-19 00:39:15,694 [Worker-65] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:41:29,059 [Worker-60] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\Rough\Maven_Work\mywebapp
+2017-08-19 00:41:29,059 [Worker-60] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B install
+2017-08-19 00:42:31,789 [Worker-60] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp
+2017-08-19 00:42:31,789 [Worker-60] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B install
+2017-08-19 00:42:36,477 [Worker-58] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:42:36,487 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-08-19 00:42:36,487 [Worker-58] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-19 00:42:36,487 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp\src\test\resources
+2017-08-19 00:44:26,189 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2017-08-19 00:45:06,464 [Worker-62] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\Rough\Java_B49\LocalCompleteDataRepos\EclipseWebapp
+2017-08-19 00:45:06,464 [Worker-62] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B jetty:run
+2017-08-19 01:11:14,323 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-08-19 20:43:15,749 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
