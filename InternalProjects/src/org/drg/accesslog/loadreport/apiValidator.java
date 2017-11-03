@@ -34,13 +34,16 @@ public class apiValidator {
 	LinkedHashMap<String, String> Maxlogs = new LinkedHashMap<String, String>();
 	LinkedHashMap<String, String> Timerlogs = new LinkedHashMap<String, String>();
 	LinkedHashMap<String, Long> avg = new LinkedHashMap<String, Long>();
-	LinkedHashMap<String, LinkedList<Long>> avg90 = new LinkedHashMap<String, LinkedList<Long>>();
+	LinkedHashMap<String, String> avg90 = new LinkedHashMap<String, String>();
+	LinkedList<Double> avgT = new LinkedList<Double>();
 
 	@SuppressWarnings("boxing")
 	Long count = 0L;
 	int timer = Integer.parseInt(in.get("DATECOLUMN"));
 	int exetime = Integer.parseInt(in.get("EXECOLUMN"));
 	int succescol = Integer.parseInt(in.get("SUCCESSCOL"));
+	String Temp = "";
+	Double TOTALHITS = 0.0;
 
 	@SuppressWarnings("boxing")
 	public LinkedHashMap<String, String> readCheck(String log) {
@@ -70,22 +73,11 @@ public class apiValidator {
 
 						Timerlogs.put(s + "TMAX", len[timer - 1]);
 
-						// Timerlogs.put(s + "TMAX",
-						// (Timerlogs.get(s + "TMAX") == null) ? len[timer - 1]
-						// : len[timer - 1]);
-
 						avg.put(s, (avg.get(s) == null ? Long.parseLong(len[exetime - 1])
 								: avg.get(s) + (Long.parseLong(len[exetime - 1]))));
 
-						/*
-						 * if(avg90.get(s)==null) { List<Long> ll = new
-						 * LinkedList<Long>(); ll.add(Long.parseLong(len[exetime
-						 * - 1])); avg90.put(s, (LinkedList<Long>) ll);
-						 * 
-						 * } else {
-						 * 
-						 * avg90.get(s).add(Long.parseLong(len[exetime - 1])); }
-						 */
+						avg90.put(s,
+								(avg90.get(s) == null ? len[exetime - 1] : avg90.get(s) + "," + (len[exetime - 1])));
 
 						apivalues.put(s + "MIN",
 								(BigInteger) ((apivalues.get(s + "MIN") == null)
@@ -149,6 +141,9 @@ public class apiValidator {
 						avg.put(s + ACTION, (avg.get(s + ACTION) == null ? Long.parseLong(len[exetime - 1])
 								: avg.get(s + ACTION) + Long.parseLong(len[exetime - 1])));
 
+						avg90.put(s + "_" + ACTION, (avg90.get(s + "_" + ACTION) == null ? len[exetime - 1]
+								: avg90.get(s + "_" + ACTION) + "," + (len[exetime - 1])));
+
 						if (Timerlogs.get(s + ACTION + "TMIN") == null) {
 							Timerlogs.put(s + ACTION + "TMIN", len[timer - 1]);
 						}
@@ -205,6 +200,9 @@ public class apiValidator {
 
 						avg.put(s, (avg.get(s) == null ? Long.parseLong(len[exetime - 1])
 								: avg.get(s) + Long.parseLong(len[exetime - 1])));
+
+						avg90.put(s,
+								(avg90.get(s) == null ? len[exetime - 1] : avg90.get(s) + "," + (len[exetime - 1])));
 
 						if (Timerlogs.get(s + "TMIN") == null) {
 							Timerlogs.put(s + "TMIN", len[timer - 1]);
@@ -294,7 +292,6 @@ public class apiValidator {
 						+ "#" + Maxlogs.get("Total") + "#" + Timerlogs.get("TMIN") + "#" + Timerlogs.get("TMAX"));
 
 		allCount.put("COUNT", count);
-
 		return all;
 
 	}
@@ -325,9 +322,9 @@ public class apiValidator {
 			bw = new BufferedWriter(new FileWriter(OUTDIR + "Out" + dateformat.format(date) + ".csv"));
 			String Total = null;
 			System.out.println(
-					"Info,TOTAL-HITS,Time_Duration(S),TPS,MAX_TIME(ms),MIN_TIME(ms),AVG_TIME(ms),SUCCESS,FAILURE,MAX_LOG");
+					"Info,TOTAL-HITS,Time_Duration(S),TPS,MAX_TIME(ms),MIN_TIME(ms),AVG_TIME(ms),AVG_90%(ms),SUCCESS,FAILURE,MAX_LOG");
 			bw.write(
-					"Info,TOTAL-HITS,Time_Duration(S),TPS,MAX_TIME(ms),MIN_TIME(ms),AVG_TIME(ms),SUCCESS,FAILURE,MAX_LOG"
+					"Info,TOTAL-HITS,Time_Duration(S),TPS,MAX_TIME(ms),MIN_TIME(ms),AVG_TIME(ms),AVG_90%(ms),SUCCESS,FAILURE,MAX_LOG"
 							+ "\n");
 			for (Map.Entry<String, String> entry : allIn.entrySet()) {
 
@@ -345,23 +342,34 @@ public class apiValidator {
 				@SuppressWarnings("boxing")
 				Double AVG = Double.parseDouble(alt[3]) / Double.parseDouble(alt[0]);
 				// Total Execution Time / Total No. of Hits
+
+				TOTALHITS = Double.parseDouble(alt[0]);
+
+				// Avg 90 percentile
+				Double AVG90 = averageExecuteTime.avg90Percent(avg90, entry.getKey()) / Double.parseDouble(alt[0]);
+
+				avgT.add(AVG90);
+
 				if (entry.getKey().equals("TOTAL")) {
 					Total = entry.getKey() + "," + BigInteger.valueOf(Long.parseLong(alt[0])) + "," + TotalTime + ","
-							+ TPS + "," + alt[1] + "," + alt[2] + "," + AVG + "," + alt[4] + "," + alt[5] + ","
-							+ alt[6];
+							+ TPS + "," + alt[1] + "," + alt[2] + "," + AVG + "," + AVG90 + "," + alt[4] + "," + alt[5]
+							+ "," + alt[6];
 					continue;
 				}
 
 				System.out.println(entry.getKey() + "," + BigInteger.valueOf(Long.parseLong(alt[0])) + "," + TotalTime
-						+ "," + TPS + "," + alt[1] + "," + alt[2] + "," + AVG + "," + alt[3] + "," + alt[4] + ","
-						+ alt[5] + "," + alt[6]);
+						+ "," + TPS + "," + alt[1] + "," + alt[2] + "," + AVG + "," + AVG90 + "," + alt[3] + ","
+						+ alt[4] + "," + alt[5] + "," + alt[6]);
 
 				bw.write(entry.getKey() + "," + BigInteger.valueOf(Long.parseLong(alt[0])) + "," + TotalTime + "," + TPS
-						+ "," + alt[1] + "," + alt[2] + "," + AVG + "," + alt[4] + "," + alt[5] + "," + alt[6] + "\n");
+						+ "," + alt[1] + "," + alt[2] + "," + AVG + "," + AVG90 + "," + alt[4] + "," + alt[5] + ","
+						+ alt[6] + "\n");
 			}
+
 			if (Total != null) {
-				bw.write(Total);
-				System.out.println(Total);
+				Temp = averageExecuteTime.TotalValue(avgT, Total, avg90);
+				bw.write(Temp);
+				System.out.println(Temp);
 			} else {
 				System.out.println("No Matching Entry Found For PARSED IP SET !!");
 			}
