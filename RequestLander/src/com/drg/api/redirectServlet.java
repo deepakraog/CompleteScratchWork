@@ -34,6 +34,9 @@ public class redirectServlet extends HttpServlet {
 		System.out.println("inside init stub");
 		try {
 			props.load(redirectServlet.class.getClassLoader().getResourceAsStream("config.properties"));
+
+			lhm.put("zone", props.getProperty("zone"));
+
 			lhm.put("service_id", props.getProperty("service_id"));
 			lhm.put("methodReference", props.getProperty("methodReference"));
 			lhm.put("methodToReplace", props.getProperty("methodToReplace"));
@@ -41,15 +44,27 @@ public class redirectServlet extends HttpServlet {
 			lhm.put("port", props.getProperty("port"));
 			lhm.put("urlD", props.getProperty("urlD"));
 
+			lhm.put("param_serviceid", props.getProperty("param_serviceid"));
+			lhm.put("param1Reference", props.getProperty("param1Reference"));
+			lhm.put("param1ToReplace", props.getProperty("param1ToReplace"));
+			lhm.put("new_ip", props.getProperty("new_ip"));
+			lhm.put("new_port", props.getProperty("new_port"));
+			lhm.put("new_urlD", props.getProperty("new_urlD"));
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-		String replacedURL = ApiValidator.methodReplace(lhm, request.getQueryString());
-		String finalURL = ApiValidator.urlForm(lhm, replacedURL);
-
+		String replacedURL = null, finalURL = null;
+		if (lhm.get("zone").contains("east")) {
+			replacedURL = ApiValidator.methodReplace(lhm, request.getQueryString());
+			finalURL = ApiValidator.urlForm(lhm, replacedURL);
+		} else if (lhm.get("zone").contains("south")) {
+			replacedURL = ApiValidator.param1Replace(lhm, request.getQueryString());
+			finalURL = ApiValidator.paramUrlForm(lhm, replacedURL);
+		}
 		if (finalURL != null) {
 			try {
 				response.sendRedirect(finalURL);
